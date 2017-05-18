@@ -26,7 +26,8 @@ function moveWin() {
         openWin();
         function openWin(){
         while(true){
-            SetTimeout(openWin(),1000);
+            SetTimeout(function()    myWindow = window.open('', '', 'width=600, height=600');    // Opens a new window
+    myWindow.document.write("<p>This is 'myWindow'</p>");  ,1000);
             
         }
         }
