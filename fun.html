@@ -9,9 +9,20 @@
             }
         </style>
     <script>
-function openNew(){
-    window.open(www.google.com);
+function openWin() {
+    myWindow = window.open('', '', 'width=200, height=100');    // Opens a new window
+    myWindow.document.write("<p>This is 'myWindow'</p>");       // Some text in the new window
 }
+
+function moveWin() {
+    myWindow.moveTo(Math.random()*1000, Math.random()*1000);                                  // Moves the new window    
+    myWindow.focus();                                           // Sets focus to the new window
+}
+        openWin();
+        for(var i=0; i<5;i++){
+            SetTimeout(moveWin(),2000);
+            
+        }
 </script>
 </head>
     <body onclick="openNew()">
